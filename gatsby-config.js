@@ -3,7 +3,12 @@ module.exports = {
     title: "gatsby-portfolio",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+          implementation: require('sass')
+      },
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
